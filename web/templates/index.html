@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Link QR — preview</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1 class="neon">Link QR</h1>
+      {% if qrcode_filename %}
+        <div class="qr">
+          <img src="/qrcode/{{ qrcode_filename }}" alt="QR code" />
+        </div>
+        <a class="download" href="/qrcode/{{ qrcode_filename }}" download>Download PNG</a>
+      {% else %}
+        <p class="muted">No QR found yet. Generate a QR with the CLI and refresh this page.</p>
+      {% endif %}
+      <p class="hint">Tip: open this page on another device to scan the QR directly.</p>
+    </div>
+  </div>
+</body>
+</html>

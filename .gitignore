@@ -1,8 +1,17 @@
-venv/
+# Python
 __pycache__/
-dist/
-build/
 *.pyc
-out/
-*.egg-info
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual env
+venv/
+.venv/
+
+# Local files
+web/generated.png
+
+# System files
 .DS_Store
+Thumbs.db

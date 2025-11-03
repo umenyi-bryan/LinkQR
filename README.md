@@ -1,41 +1,44 @@
-# 🌐 LinkQR
+# ⚡ LinkQR ⚡
 
-Turn any link into a stunning neon QR code — cross-platform for Termux, Kali Linux, and Windows.
+Turn any link into a glowing neon QR code.
 
-## ✨ Features
-- Generate QR codes from any URL
-- Neon-styled local web preview
-- Simple CLI (Command Line Interface)
-- Lightweight and portable
-- Open source and easy to modify
+![Preview](https://raw.githubusercontent.com/umenyi-bryan/link-qr/main/web/generated.png)
 
 ---
 
-## ⚙️ Quick Start
+## 🌐 Features
+- Convert any URL into a QR code.
+- View it instantly on a neon-styled local web page.
+- Works on **Termux**, **Kali Linux**, and **Windows**.
+- Open source and extendable.
 
-### 1. Clone the repository
+---
+
+## 🚀 Quick Start
+
 ```bash
-git clone https://github.com/umenyi-bryan/LinkQR.git
-cd LinkQR
+# Clone the repo
+git clone https://github.com/umenyi-bryan/link-qr.git
+cd link-qr
+
+# Set up environment
 python3 -m venv venv
-source venv/bin/activate   # On Termux/Linux
-# OR
-venv\Scripts\activate      # On Windows
+. venv/bin/activate
 pip install -r requirements.txt
-python3 cli/link_qr.py "https://example.com" --out ./out/example.png --neon
-python3 web_preview.py
+
+# Run it
+python3 cli/link_qr.py
+
+# Then open the glowing web preview at
 http://127.0.0.1:8000
 
-LinkQR/
-│
-├── cli/
-│   └── link_qr.py        # Main CLI entry point
-│
-├── web/
-│   ├── index.html        # Neon QR web interface
-│   ├── style.css         # Neon theme styling
-│   └── script.js         # Dynamic QR display
-│
-├── out/                  # Generated QR codes
-├── requirements.txt      # Python dependencies
-└── README.md             # This file
+link-qr/
+├── cli/           # Command-line interface
+├── web/           # Flask neon web preview
+├── requirements.txt
+└── README.md
+
+🛠 Made by Anonymous
+
+Open source • MIT License
+

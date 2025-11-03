@@ -3,97 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🌐 LinkQR | Neon QR Generator</title>
-
-  <style>
-    body {
-      background: radial-gradient(circle at 20% 20%, #0f2027, #203a43, #2c5364);
-      color: #e0f7fa;
-      font-family: "Share Tech Mono", monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      text-shadow: 0 0 15px cyan, 0 0 25px #00ffff, 0 0 40px #00e0ff;
-      color: #00eaff;
-      margin-bottom: 10px;
-      animation: pulse 2s infinite alternate;
-    }
-
-    h2 {
-      color: #76ffff;
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px #00ffff;
-    }
-
-    @keyframes pulse {
-      from { text-shadow: 0 0 10px cyan; }
-      to { text-shadow: 0 0 25px #00ffff, 0 0 40px #00e0ff; }
-    }
-
-    img {
-      width: 250px;
-      height: 250px;
-      border: 2px solid #00ffff;
-      border-radius: 12px;
-      box-shadow: 0 0 25px #00eaff;
-      margin-bottom: 20px;
-      transition: transform 0.3s;
-    }
-
-    img:hover {
-      transform: scale(1.05);
-    }
-
-    a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-      text-shadow: 0 0 5px #00ffff;
-      transition: 0.2s;
-    }
-
-    a:hover {
-      color: #fff;
-      text-shadow: 0 0 20px #00ffff;
-    }
-
-    .tip {
-      margin-top: 25px;
-      font-size: 0.9rem;
-      color: #80deea;
-      text-shadow: 0 0 5px #00bcd4;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.8rem;
-      color: #00ffff80;
-    }
-  </style>
+  <title>⚡ LinkQR ⚡</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <h1>⚡ LinkQR ⚡</h1>
+  <div class="container">
+    <h1>⚡ LinkQR ⚡</h1>
+    <p class="tagline">Turn any link into a glowing neon QR code</p>
 
-  {% if qrcode_filename %}
-    <h2>QR Code</h2>
-    <img src="{{ qrcode_filename }}" alt="Generated QR Code" />
-    <p><a href="{{ qrcode_filename }}" download>⬇️ Download PNG</a></p>
-  {% else %}
-    <p>No QR found yet.<br>Generate a QR with the CLI and refresh this page.</p>
-  {% endif %}
+    <div class="form">
+      <input id="urlInput" type="text" placeholder="https://example.com" />
+      <button id="generateBtn">Generate QR</button>
+    </div>
 
-  <div class="tip">Tip: open this page on another device to scan the QR directly.</div>
+    <div class="qr-display" id="qrDisplay">
+      <p>No QR found yet. Run the CLI or submit a URL above and refresh.</p>
+    </div>
 
-  <footer>🧠 Built with ❤️ by Anonymous | LinkQR v1.0</footer>
+    <footer>
+      <p>Made by <strong>Anonymous</strong> • <span class="brand">LinkQR</span> — Open Source</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

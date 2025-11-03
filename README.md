@@ -1,3 +1,7 @@
+![GitHub stars](https://img.shields.io/github/stars/umenyi-bryan/link-qr?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/umenyi-bryan/link-qr?style=for-the-badge)
+![GitHub license](https://img.shields.io/github/license/umenyi-bryan/link-qr?style=for-the-badge)
+![Python version](https://img.shields.io/badge/python-3.10+-blue?style=for-the-badge)
 # ⚡ LinkQR ⚡
 
 Turn any link into a glowing neon QR code.
